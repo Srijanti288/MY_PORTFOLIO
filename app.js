@@ -13,7 +13,7 @@ import userRouter from "./router/userRoutes.js";
 import educationRouter from "./router/educationRoutes.js";
 import ApplicationRouter from "./router/softwareApplicationRoutes.js";
 import skillRouter from "./router/skillRoutes.js";
-
+import projectRouter from "./router/projectRoutes.js";
 // ------------------ ENVIRONMENT CONFIG ------------------
 dotenv.config({ path: "./config/config.env" });
 
@@ -52,6 +52,7 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/education", educationRouter);
 app.use("/api/v1/softwareapplication", ApplicationRouter);
 app.use("/api/v1/skill", skillRouter);
+app.use("/api/v1/project", projectRouter);
 
 // ------------------ ERROR HANDLING ------------------
 app.use(errorMiddleware);
