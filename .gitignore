@@ -3,4 +3,4 @@ node_modules/
 
 # Environment files
 /config/config.env
-.envs
+.env

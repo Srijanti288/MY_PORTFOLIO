@@ -16,15 +16,15 @@ const router = express.Router();
 // ------------------ ROUTES ------------------
 
 // Send a new message
-router.post("/send", sendMessage);
+router.post("/", sendMessage);
 
 // Get all messages
-router.get("/getall", getAllMessages);
+router.get("/", getAllMessages);
 
 // Get a single message by ID
 router.get("/:id", getMessageById);
 
 // Delete a message (requires authentication)
-router.delete("/delete/:id", isAuthenticated, deleteMessage);
+router.delete("/:id", isAuthenticated, deleteMessage);
 
 export default router;

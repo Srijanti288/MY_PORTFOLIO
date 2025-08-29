@@ -10,6 +10,9 @@ import dbConnection from "./database/dbConnection.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import messageRouter from "./router/messageRoutes.js";
 import userRouter from "./router/userRoutes.js";
+import educationRouter from "./router/educationRoutes.js";
+import ApplicationRouter from "./router/softwareApplicationRoutes.js";
+import skillRouter from "./router/skillRoutes.js";
 
 // ------------------ ENVIRONMENT CONFIG ------------------
 dotenv.config({ path: "./config/config.env" });
@@ -46,6 +49,9 @@ app.use(
 // ------------------ ROUTES ------------------
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/education", educationRouter);
+app.use("/api/v1/softwareapplication", ApplicationRouter);
+app.use("/api/v1/skill", skillRouter);
 
 // ------------------ ERROR HANDLING ------------------
 app.use(errorMiddleware);
